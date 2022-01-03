@@ -29,6 +29,7 @@ public class ValidateLogin extends LaunchBrowser{
 		 
 		 driver = ValidateLogin.browser();
 		 log.info("Browser Launch Successfully");
+		 System.out.println("Git Check");
 	 }
 	 
 
