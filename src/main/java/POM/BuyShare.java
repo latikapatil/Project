@@ -1,11 +1,15 @@
 package POM;
 
+import java.io.IOException;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import Utilities.ScreenShot;
 
 public class BuyShare {
 	
@@ -76,6 +80,14 @@ public class BuyShare {
 		if(error.isDisplayed()==true)
 		{
 			buycancel.click();
+		}
+	}
+	public void taksnapamo(WebDriver driver) throws IOException, InterruptedException
+	{
+		if(error.isDisplayed()==true)
+			
+		{
+			ScreenShot.captureScreenshot("Order placed", driver);
 		}
 	}
 	

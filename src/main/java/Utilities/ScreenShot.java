@@ -17,7 +17,7 @@ public class ScreenShot {
 		
 		//WebDriver driver = LaunchBrowser.browser();
 		File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File destnation = new File ("C:\\Users\\Latika\\eclipse-workspace\\ZerodhaProject\\Screenshot\\"+snap+".jpeg");
+		File destnation = new File ("C:\\Git\\Project\\Project\\Screenshot\\"+snap+".jpeg");
 		FileHandler.copy(source, destnation);
 	}
 
