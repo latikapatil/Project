@@ -6,8 +6,8 @@
       <class name="TestPkage.ValidateBuyShare">
         <methods>
           <include name="login"/>
-          <include name="validateBuyShareIntraday"/>
           <include name="clickSnap"/>
+          <include name="validateBuyShareAmo"/>
         </methods>
       </class> <!-- TestPkage.ValidateBuyShare -->
     </classes>

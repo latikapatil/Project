@@ -33,7 +33,7 @@ public class ValidateBuyShare {
 		log.info("Login Successfully into Zerodha");
 	}
 	
-	@Test (priority = 1)
+	@Test (priority = 1,enabled =false)
 	public void validateBuyShareIntraday() {
 		
 		BuyShare buy = new BuyShare(driver);
@@ -54,8 +54,8 @@ public class ValidateBuyShare {
 		buy.clickCancel();
 		
 	}
-	@Test(priority = 2,enabled =false)
-	public void validateBuyShareAmo() {
+	@Test(priority = 2)
+	public void validateBuyShareAmo() throws IOException, InterruptedException {
 		BuyShare buy = new BuyShare(driver);
 		buy.enterSearchCo();
 		buy.clickOnCo(driver);
@@ -67,11 +67,14 @@ public class ValidateBuyShare {
 		buy.clearPrice();
 		buy.enterPrice();
 		buy.buyShare();
+		buy.taksnapamo(driver);
 		
 	}
 	
 	@AfterMethod
 	public void clickSnap() throws IOException, InterruptedException {
+		
+		
 		ScreenShot.captureScreenshot("Buyshare", driver);
 	}
 }
